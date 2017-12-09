@@ -13,15 +13,14 @@ const ext = require("./webext");
 const $ = ext.$;
 const storage = ext.storage;
 
-/*
+
 // Use the settings stored in options.html
 storage.get('color', function(resp) {
 	var color = resp.color;
 	if(color) {
-		document.body.style.backgroundColor = color;
+		$(document.body).css('background-color',color);
 	}
 });
-*/
 
 // Get the current tab and request that it do something. Often, this might be in relation to a button-click/form submit
 // ...but here it's done immediately

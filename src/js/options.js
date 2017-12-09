@@ -12,32 +12,29 @@ const ext = require("./webext");
 const storage = ext.storage;
 const $ = ext.$;
 
-/*
+
 var colorSelectors = $(".js-radio");
 
 function setColor(color) {
-  $(document.body).css('backgroundColor', color);
+  $(document.body).css('background-color', color);
 };
 
 storage.get('color', function(resp) {
   var color = resp.color;
   var option;
   if(color) {
-    option = document.querySelector(`.js-radio.${color}`);
+    option = $(`.js-radio.${color}`);
     setColor(color);
   } else {
-    option = colorSelectors[0]
+    option = colorSelectors;
   }
 
-  option.setAttribute("checked", "checked");
+  option.attr("checked", "checked");
 });
 
-colorSelectors.forEach(function(el) {
-  el.addEventListener("click", function(e) {
+colorSelectors.on("click", function(e) {
     var value = this.value;
     storage.set({ color: value }, function() {
       setColor(value);
     });
-  })
-})
-*/
+});

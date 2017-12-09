@@ -118,7 +118,13 @@
 			if ( value === undefined) {
 				return !this.elems.length ? undefined : window.getComputedStyle(this.elems[0])[rule];
 			}
-			rule = rule.replace('-', '');
+			//rule = rule.replace('-', '');
+			rule = rule.split('-').map(function(val, idx) {
+				if (idx>0)
+					val = val.replace(/^(.)/, function(m, m1)  { return m1.toUpperCase(); })
+				return val;
+			}).join('');
+
 			this.each(function(i, el) { el.style[rule] = value; }); // eg. css('font-family', 'arial') ==> el.style.fontfamily = 'Arial';
 			return this; 
 		},
