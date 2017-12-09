@@ -5,18 +5,18 @@
   "description": "WebExtensions boilerplate",
   "scripts": {
     "build": "rm -rf build/* && webpack --display-error-details --optimize-minimize",
-    "build:debug": "rm -rf build && webpack --display-error-details"
+    "build:debug": "rm -rf build && webpack --display-error-details",
+    "watch": "webpack --progress --colors --watch"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cmroanirgo/webextensions-boilerplate.git"
+    "url": "https://github.com/cmroanirgo/webextension-template.git"
   },
   "author": "cmroanirgo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cmroanirgo/webextensions-boilerplate/issues"
+    "url": "https://github.com/cmroanirgo/webextensions-template/issues"
   },
-  "homepage": "https://github.com/cmroanirgo/webextensions-boilerplate#readme",
+  "homepage": "https://github.com/cmroanirgo/webextension-template#readme",
   "devDependencies": {
     "copy-webpack-plugin": "^4.2.3",
     "file-loader": "^1.1.5",
