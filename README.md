@@ -38,7 +38,7 @@ Watching
 npm run watch
 ```
 
-**Note: ** It is important that you run `npm run build` to generate a final minified version, rather than relying on the last watch output.
+Note: It is important that you run `npm run build` to generate a final minified version, rather than relying on the last watch output.
 
 
 ### Adding New Target Platforms
@@ -53,25 +53,25 @@ If you wish to develop for Edge or Opera then:
 
 ### Chrome
 
-1. Go to [chrome://extensions/](chrome://extensions/)
+1. Go to <a href="chrome://extensions/">chrome://extensions/</a>
 2. Click `Load Unpacked Extension` and select the `build/chrome` folder
 
 Note: Chrome will keep this extension loaded after shutting down Chrome.
 
 ### Firefox
 
-1. Go to [about:debugging#addons](about:debugging#addons)
+1. Go to <a href="about:debugging#addons">about:debugging#addons</a>
 2. Click 'Load Temporary add-on' and select any file in the 'build/firefox' folder
 
-Note: Firefox will always unload this extension loaded after shutting down Firefox.
+Note: Firefox will always unload this extension after shutting down Firefox.
 
 ## Credits
 
 Thanks to the inspirational work by Bharani, and his [Email This](https://www.emailthis.me) boilerplate. Some of his code has been used (and credited) in this project, but will be morphed and removed over time.
 The primary differences between the two projects:
 
-1. Removal of language support. Ironic.
-2. Removal of Opera support. It's basically the same as Chrome, but easy to add back in, if need be.
-3. Removal grunt to use webpack. This allows the code to better minified
-4. Addition of a jquery-like module (notjquery.js) which allows for most common jquery functions, without the seperate (& large) download
+1. Removal of language support. Ironic, no?.
+2. Removal of Opera support. It's basically the same as Chrome, but trivial to add back in, if need be.
+3. Changed grunt to use webpack. This allows the code to better minified & controlled.
+4. Addition of a jquery-like module (notjquery.js) which allows for most common jquery functions, without the seperate (& large) download. See the source files for a demo.
 
